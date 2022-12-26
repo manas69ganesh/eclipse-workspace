@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Create Product</title>
+</head>
+<body>
+
+<h3 style="text-align:center;"><u>Create Product</u></h3>
+<br>
+<br>
+
+<form action="#" th:action="@{/create}" method="post" th:object="${product}">
+ <table style="margin-left: auto;margin-right: auto;">
+ <tr><td><label>Name:</label></td><td>&nbsp;</td><td><input type="text" name="productName" id="productName" th:field="*{productName}"/></td></tr>
+ <tr><td><label>Type:</label></td><td>&nbsp;</td><td><input type="text" name="productType" id="productType" th:field="*{productType}"/></td></tr>
+ <tr><td><label>Version:</label></td><td>&nbsp;</td><td><input type="text" name="productVersion" id="productVersion" th:field="*{productVersion}"/></td></tr>
+ <tr><td><label>Description:</label></td><td>&nbsp;</td><td><input type="text" name="productDesc" id="productDesc" th:field="*{productDescription}"/></td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr align="center"><td colspan="2"><input type="submit" name="Create" value="Create" class="btn btn-primary"></td>
+ <tr align="center"><td><a th:href="@{/home}"><input type="button" value="Back" class="btn btn-primary"></a></td></tr>
+</table>
+</form>   
+
+</body>
+</html>

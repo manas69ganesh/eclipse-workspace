@@ -1,0 +1,42 @@
+package com.amat.sfmpoc.util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		String connString = "jdbc:sqlserver://nso-cloudmes-mrs-sql-server.database.windows.net:1433;database=nso-cloudmes-mrs-db1;user=manas@nso-cloudmes-mrs-sql-server;password=Ganesh@#2022;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
+
+//		String user = "manas@nso-cloudmes-mrs-sql-server";
+
+//		String password = "Ganesh@#2022";
+
+		String[] connStringArray = connString.split(";");
+
+		String user = "";
+		String password = "";
+
+		for (String conString : connStringArray) {
+			if (!conString.isEmpty()) {
+				String[] oneKeyValue = conString.split("=");
+
+				if (oneKeyValue[0].equals("user")) {
+					user = oneKeyValue[1];
+				}
+
+				if (oneKeyValue[0].equals("password")) {
+					password = oneKeyValue[1];
+				}
+
+			}
+		}
+
+		System.out.println("Connectiom String =>" + connString);
+		System.out.println("User =>" + user + "====Password=>" + password);
+
+	}
+
+}

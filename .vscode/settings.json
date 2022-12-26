@@ -1,0 +1,6 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8f1916d2-5292-4cf6-b2f8-31ce9c1290b1/AppServices/subscriptions/8f1916d2-5292-4cf6-b2f8-31ce9c1290b1/resourceGroups/apr-5lq2a3fkflttm/providers/Microsoft.Web/sites/nso-cloudmes-mrs-jwa",
+    "appService.deploySubpath": "ProductManagement",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.compile.nullAnalysis.mode": "automatic"
+}

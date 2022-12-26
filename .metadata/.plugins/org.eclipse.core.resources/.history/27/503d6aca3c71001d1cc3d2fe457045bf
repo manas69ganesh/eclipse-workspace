@@ -1,0 +1,26 @@
+package com.amat.sfmpoc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class ProductManagementController {
+	@RequestMapping("/portal")
+	public ModelAndView indexPage() {
+		ModelAndView mav = new ModelAndView("welcome");
+		return mav;
+	}
+	
+	@RequestMapping("/home")
+	public ModelAndView homePage() {
+		ModelAndView mav = new ModelAndView("home");
+		return mav;
+	}
+	
+	@RequestMapping("/create-product")
+	public ModelAndView createProductPage() {
+		ModelAndView mav = new ModelAndView("create-product");
+		return mav;
+	}
+}
